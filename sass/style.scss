@@ -1,0 +1,25 @@
+body{
+    background: #070616;
+    color: white;
+    font-family: sans-serif;
+}
+section{
+    border: 2px solid rgb(145, 194, 145);
+    width:fit-content;
+    padding: 2vw;
+    border-radius: 2px;
+    &#passwordBox{
+        #passForm{
+            display:flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+        #passResult{
+            b{
+                color: rgb(151, 218, 151);
+            }
+            display:none;
+            flex-direction: column;
+        }
+    }
+}
