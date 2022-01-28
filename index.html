@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div class="container">
     <main>
         <section id="passwordBox">
+            <h2>Password Generator</h2>
             <form id="passForm">
                 <div>
                     <input type="checkbox" name="num" id="numCheck">
@@ -27,18 +29,69 @@
                 </div>
                 <div>
                     <label for="len">Length :</label>
-                    <input type="number" name="len" id="lenCheck" min="6" max="30" value="6">
+                    <input type="number" name="len" id="lenCheck" min="6" max="30" value="6" required>
                 </div>
 
                 <input type="submit" value="Generate">
             </form>
             <div id="passResult">
-                <p>Password : <b></b></p>
+                <div>
+                    <p>Password : <b></b></p><button
+                        onclick="navigator.clipboard.writeText(document.querySelector('#passResult div b').innerHTML), alert('Password copied in clipboard')">Copy
+                        password</button>
+                </div>
                 <button onclick="resetPass()">Generate another password</button>
             </div>
         </section>
-        </main>
+        <section id="cryptMess">
+            <h2>Encrypt a message</h2>
+            <form id="encryptForm">
+            <div id="encryptAction">
+                <div>
+                    <input type="radio" name="action" value="encrypt" checked>
+                    <label for="encrypt">Encrypt</label>
+                </div>
 
+                <div>
+                    <input type="radio" name="action" value="decrypt">
+                    <label for="decrypt">Decrypt</label>
+                </div>
+            </div>
+            <div>
+                <label for="message">Your messsage :</label>
+                <textarea name="message" id="cryptMessageInput" cols="50" rows="10" placeholder="Mon message" required></textarea>
+            </div>
+            <div>
+                <label for="message" required>Your key :</label>
+                <input type="text">
+            </div>
+                <input type="submit" value="Encrypt">
+            </form>
+            <div id="cryptResult">
+                <p>Result :<b></b></p>
+                <button>Go back</button>
+            </div>
+        </section>
+    </main>
+    <aside id="news">
+        <h2>News feed</h2>
+        <div>
+        <select name="lang" id="langSelect" onchange="updateFeed()">
+            <option value="fr">FR</option>
+            <option value="en" selected>EN</option>
+            <option value="zh">ZH</option>
+            <option value="de">DE</option>
+            <option value="it">IT</option>
+            <option value="jp">JP</option>
+            <option value="ru">RU</option>
+            <option value="es">ES</option>
+        </select>
+        <button id="updateButton" onclick="updateFeed()">Update</button></div>
+        <div id="newsFeed">
+
+        </div>
+    </aside>
+</div>
     <script src="main.js"></script>
 </body>
 

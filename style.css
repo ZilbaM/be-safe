@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  background: #070616;
+  color: white;
+  font-family: sans-serif;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 50px;
+  width: 40%;
+}
+
+section {
+  border: 2px solid #91c291;
+  border-radius: 2px;
+  max-width: 50%;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section button {
+  padding: 5px;
+}
+section h2 {
+  margin-bottom: 10px;
+}
+section input[type=submit] {
+  width: fit-content;
+  padding: 5px 10px;
+}
+section#passwordBox #passForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+section#passwordBox #passResult {
+  display: flex;
+  gap: 20px;
+  display: none;
+  flex-direction: column;
+}
+section#passwordBox #passResult div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+section#passwordBox #passResult b {
+  color: #97da97;
+}
+section#cryptMess #encryptForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section#cryptMess #encryptForm div {
+  display: flex;
+  flex-direction: column;
+}
+section#cryptMess #encryptForm div#encryptAction {
+  flex-direction: row;
+  gap: 25%;
+}
+section#cryptMess #encryptForm div#encryptAction div {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+section#cryptMess #encryptForm textarea {
+  max-width: 100%;
+}
+section#cryptMess #cryptResult {
+  display: none;
+}
+
+aside {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside #newsFeed {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  padding: 5%;
+}
+aside #newsFeed .news-piece {
+  padding: 5px;
+  border: 1px solid #91c291;
+}
+aside #newsFeed .news-piece a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+aside #newsFeed .news-piece a:hover {
+  color: #97da97;
+}
+
+/*# sourceMappingURL=style.css.map */

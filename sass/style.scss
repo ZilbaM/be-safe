@@ -1,13 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
+    overflow: hidden;
+}
+.container{
     background: #070616;
     color: white;
     font-family: sans-serif;
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width:100vw;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    gap: 50px;
+    width: 40%;
 }
 section{
     border: 2px solid rgb(145, 194, 145);
-    width:fit-content;
-    padding: 2vw;
     border-radius: 2px;
+    max-width:50%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    button{
+        padding:5px;
+    }
+    h2{
+        margin-bottom: 10px;
+    }
+    input[type=submit]{
+        width:fit-content;
+        padding: 5px 10px;
+    }
     &#passwordBox{
         #passForm{
             display:flex;
@@ -15,11 +48,75 @@ section{
             gap: 2vh;
         }
         #passResult{
+            display:flex;
+            gap: 20px;
+            
+            div{
+                display:flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                align-items: center;
+            }
             b{
                 color: rgb(151, 218, 151);
             }
             display:none;
             flex-direction: column;
+        }
+    }
+    &#cryptMess{
+        #encryptForm{
+            display:flex;
+            flex-direction: column;
+            gap: 10px;
+            div{
+                display:flex;
+                flex-direction: column;
+                &#encryptAction{
+                    flex-direction: row;
+                    gap: 25%;
+                    div{
+                        display:flex;
+                        flex-direction: row;
+                        gap: 5%;
+                    }
+                }
+            }
+            textarea{
+                max-width:100%;
+                
+            }
+            
+        }
+        #cryptResult{
+               display:none ;
+        }
+    }
+}
+aside{
+    
+    width:40%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #newsFeed{
+        display:flex;
+        flex-direction: column;
+        height:100%;
+        justify-content: space-around;
+        padding:5%;
+        .news-piece{
+            padding: 5px;
+            border: 1px solid rgb(145, 194, 145);
+            a{
+                color: white;
+                text-decoration: none;
+                font-size:1rem;
+                &:hover{
+                    color:rgb(151, 218, 151);
+                }
+            }
         }
     }
 }
