@@ -95,7 +95,8 @@ section{
 }
 aside{
     
-    width:40%;
+    width:auto;
+    max-width: 50%;
     height:100vh;
     display: flex;
     flex-direction: column;
@@ -116,6 +117,9 @@ aside{
                 &:hover{
                     color:rgb(151, 218, 151);
                 }
+            }
+            p{
+                font-size: 0.8rem;
             }
         }
     }

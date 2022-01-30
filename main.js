@@ -43,7 +43,6 @@ encryptForm.addEventListener('submit', function(event){
     let action = document.querySelector('#encryptForm input[type=radio]:checked').value
     let message = document.querySelector('#encryptForm textarea').value
     let key = document.querySelector('#encryptForm input[type=text]').value
-    console.log(`https://classify-web.herokuapp.com/api/${action}`)
     fetch(`https://classify-web.herokuapp.com/api/${action}`, {
         method: 'POST',
         headers:{
@@ -56,7 +55,6 @@ encryptForm.addEventListener('submit', function(event){
     }).then(response => response.json())
         .then(data => {
         let result = data.result
-        console.log(data)
         document.querySelector('#cryptResult b').innerHTML = result
         document.querySelector('#cryptResult').style.display = 'flex'
         encryptForm.style.display = 'none'
@@ -90,7 +88,7 @@ function updateFeed(){
                newsFeed.innerHTML += `
                <div class="news-piece">
                <a href="${element.link}" target="_blank"><h4>${element.title}</h4></a>
-               <p>${element.pubDate} - ${element.source_id}</p>
+               <p>${element.pubDate} - <b>${element.source_id}</b></p>
                </div>
                `
            })

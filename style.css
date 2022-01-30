@@ -92,7 +92,8 @@ section#cryptMess #cryptResult {
 }
 
 aside {
-  width: 40%;
+  width: auto;
+  max-width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -116,6 +117,9 @@ aside #newsFeed .news-piece a {
 }
 aside #newsFeed .news-piece a:hover {
   color: #97da97;
+}
+aside #newsFeed .news-piece p {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
